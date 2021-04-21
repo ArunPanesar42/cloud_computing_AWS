@@ -24,8 +24,19 @@
 - Fastest pace of innovation: With AWS, you can leverage the latest technologies to experiment and innovate more quickly. We are continually accelerating our pace of innovation to invent entirely new technologies you can use to transform your business. For example, in 2014, AWS pioneered the serverless computing space with the launch of AWS Lambda, which lets developers run their code without provisioning or managing servers. And AWS built Amazon SageMaker, a fully managed machine learning service that empowers everyday developers and scientists to use machine learning–without any previous experience.
 
 ### Who is using AWS and Cloud Computing 
+
 - BBC
-- Netflix
+- Netflix : They use auto-scaling, pre determine and estimate how many people are watching. 
 - Twitch 
 - Linkedin 
 - Facebook 
+
+### Scaling
+
+- Scaling up is when we get bigger servers
+- Scaling out is adding new servers 
+- Scaling down is when we scale down to be cost effective 
+
+### What is Hybrid Cloud 
+
+- Hybrid cloud is IT infrastructure that connects at least one public cloud and at least one private cloud
