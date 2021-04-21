@@ -49,4 +49,4 @@
 
 ### AWS DIAGRAM
 
-- 
+![aws_diagram](https://github.com/ArunPanesar42/cloud_computing_AWS/blob/main/diagram.JPG?raw=true)
