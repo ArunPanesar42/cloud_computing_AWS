@@ -40,6 +40,8 @@
 ### What is Hybrid Cloud 
 
 - Hybrid cloud is IT infrastructure that connects at least one public cloud and at least one private cloud
+##### Diagram of Cloud
+![cloud_diagram](https://github.com/ArunPanesar42/cloud_computing_AWS/blob/main/types_of_cloud.png?raw=true)
 
 ## AWS CONFIGURE
 
