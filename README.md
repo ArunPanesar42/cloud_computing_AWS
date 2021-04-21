@@ -12,7 +12,6 @@
 
 - Cost savings: The cloud allows you to trade capital expenses (such as data centers and physical servers) for variable expenses, and only pay for IT as you consume it. Plus, the variable expenses are much lower than what you would pay to do it yourself because of the economies of scale. 
 
-### Best use case, who uses it in the industry
 
 ## What is AWS
 - Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally. Millions of customers—including the fastest-growing startups, largest enterprises, and leading government agencies—are using AWS to lower costs, become more agile, and innovate faster.
@@ -24,4 +23,9 @@
 
 - Fastest pace of innovation: With AWS, you can leverage the latest technologies to experiment and innovate more quickly. We are continually accelerating our pace of innovation to invent entirely new technologies you can use to transform your business. For example, in 2014, AWS pioneered the serverless computing space with the launch of AWS Lambda, which lets developers run their code without provisioning or managing servers. And AWS built Amazon SageMaker, a fully managed machine learning service that empowers everyday developers and scientists to use machine learning–without any previous experience.
 
-### Who is using AWS
+### Who is using AWS and Cloud Computing 
+- BBC
+- Netflix
+- Twitch 
+- Linkedin 
+- Facebook 
