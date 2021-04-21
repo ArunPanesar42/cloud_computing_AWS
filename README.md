@@ -40,3 +40,13 @@
 ### What is Hybrid Cloud 
 
 - Hybrid cloud is IT infrastructure that connects at least one public cloud and at least one private cloud
+
+## AWS CONFIGURE
+
+- For EC2 we need to follow this naming convention, Key is the Name "Eng84_Apanesar_app"
+
+- security group acts as a firewall for our virtual machine 
+
+### AWS DIAGRAM
+
+- 
