@@ -43,12 +43,26 @@
 ##### Diagram of Cloud
 ![cloud_diagram](https://github.com/ArunPanesar42/cloud_computing_AWS/blob/main/types_of_cloud.png?raw=true)
 
-## AWS CONFIGURE
-
-- For EC2 we need to follow this naming convention, Key is the Name "Eng84_Apanesar_app"
-
-- security group acts as a firewall for our virtual machine 
-
 ### AWS DIAGRAM
 
 ![aws_diagram](https://github.com/ArunPanesar42/cloud_computing_AWS/blob/main/diagram.JPG?raw=true)
+
+### Architectures 
+#### Monolithic Architecture 
+When all of the servers/instances are run from a single machine. Components of the program are interconnected and dependent on each other. If an update is made, the whole application has to re-run. Despite this, it's simpler to test than modular approaches (microservices), due to having fewer components as well as being simple to deploy. For example, running all vagrant virtual machines from a single Vagrantfile.
+
+#### Two Tier Architecture
+When the presentation layer (interface) runs on a client and a data layer/structure (database) gets stored on a server. Basically, when each instance is run on a separate machine. It separates these two components into different locations. Having separate layers can improve performance and scalability.
+
+### EC2
+Elastic Compute Cloud provides scalable computing capacity in the AWS cloud. Effectively running virtual computing environments (instances) on the cloud. Some benefits:
+- Scalable - can scale up or down based on changes in requirements
+- No need for hardware up front - can develop and deploy applications faster
+- Secure - has security configurations with security groups
+##### extra info
+- For EC2 we need to follow this naming convention, Key is the Name "Eng84_Apanesar_app"
+
+
+
+
+
