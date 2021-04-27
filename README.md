@@ -47,20 +47,63 @@
 
 ![aws_diagram](https://github.com/ArunPanesar42/cloud_computing_AWS/blob/main/diagram.JPG?raw=true)
 
-### Architectures 
-#### Monolithic Architecture 
+## Architectures 
+### Monolithic Architecture 
 When all of the servers/instances are run from a single machine. Components of the program are interconnected and dependent on each other. If an update is made, the whole application has to re-run. Despite this, it's simpler to test than modular approaches (microservices), due to having fewer components as well as being simple to deploy. For example, running all vagrant virtual machines from a single Vagrantfile.
 
-#### Two Tier Architecture
+### Two Tier Architecture
 When the presentation layer (interface) runs on a client and a data layer/structure (database) gets stored on a server. Basically, when each instance is run on a separate machine. It separates these two components into different locations. Having separate layers can improve performance and scalability.
 
-### EC2
+## EC2
 Elastic Compute Cloud provides scalable computing capacity in the AWS cloud. Effectively running virtual computing environments (instances) on the cloud. Some benefits:
 - Scalable - can scale up or down based on changes in requirements
 - No need for hardware up front - can develop and deploy applications faster
 - Secure - has security configurations with security groups
-##### extra info
+#### extra info
 - For EC2 we need to follow this naming convention, Key is the Name "Eng84_Apanesar_app"
+
+## Virtual Private Cloud (VPC)
+- VPC is a service that lets you launch AWS resources in a logically isolated (secure) virtual network that you define. Services, such as EC2 instances, can be launched into the VPC.
+- It allows EC2 instances to communicate with eachother, we can also create multiple subnets.
+### Benefits OF VPC
+- *Secure and monitored network connections* - inbound and outbound filtering can be performed at the instance and subnet level.
+- *Customisable virtual network* - IP address ranges, subnets, and route tables can be configured to any available gateways.
+## Subnets
+A subnet is a network inside a network. They make networks more efficient as network traffic can travel a shorter distance without passing through unnecessary routers to reach its destination. E.g. a subnet for teachers and another one for students.
+- Public subnets have their traffic routed to an internet gateway.
+- Private subnets are not routed to an internet gateway, but its traffic is routed to a virtual private gateway for a Site-to-Site VPN connection (known as VPN-only subnet). Limits access from the internet.
+## Internet Gateway 
+An internet gateway is a horizontally scaled and highly available VPC component that allows communication between your VPC (and its components) and the internet.
+## Route Table
+A route table contains a set of rules, called routes, that are used to determine where network traffic from your subnet or gateway is directed.
+## Security Group
+Security group acts as a firewall that controls the traffic for your instance (server) on the machine. Other points:
+- As mentioned, it operates at an instance level
+- It's stateful - returning traffic is automatically allowed, regardless of the rules
+- All rules are evaluated before deciding to allow traffic
+- Supports allow rules only
+## Network Access Control List (NACL)
+
+A network access control list is an additional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets. Other points:
+- It operates at a subnet level - the rules apply to all the instances in the subnet (in addition to the SG rules applied to those instances).
+- It's stateless - returning traffic must follow the rules
+- Rules are processed in order, starting with the lowest numbered rule, when deciding to allow traffic
+- Supports both allow and deny rules
+## Ephemeral/Dynamic Ports
+
+- Shortly lived ports, 'lives' for the duration of their use
+- Automatically allocated based on the demand
+- Range from 1024-65535
+
+## Extra Commands
+### Dos2Unix
+- We use this to covert the `provisions.sh` to executable code in  
+- the command to download ``dos2unix wget "http://ftp.de.debian.org/debian/pool/main/d/dos2unix/dos2unix_6.0.4-1_amd64.deb"``
+- Then Followed by ``sudo dpkg -i dos2unix_6.0.4-1_amd64.deb``
+### Copy Permissions
+- We use this to copy files from local to ``scp -i ~/.ssh/DevOpsStudent.pem -r app/ ubuntu@'AddIP'':~/app/``
+
+
 
 
 
