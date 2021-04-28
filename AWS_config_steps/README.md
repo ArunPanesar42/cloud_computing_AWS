@@ -141,49 +141,49 @@
 ## Step 8
 ### Creating a Public NACL for the VPC
 1. Ensure that you are in the VPC section (not EC2), we then:
-    - Go to the Network ACLs section under Security
-    - Click Create network ACL
+    - Go to the `Network ACLs` section under `Security`
+    - Click `Create network ACL`
     - Add the appropriate name and allocate the VPC, then create it
   
-2. Now we set the inbound rules for the NACL.
-    - With the NACL selected, click on the Inbound rules tab
-    - Click Edit inbound rules
+2. Now we set the inbound rules for the NACL:
+    - With the NACL selected, click on the `Inbound rules` tab
+    - Click `Edit inbound rules`
     - Remove the default rule and add the following rules:
-          - 100: HTTP (80) with source 0.0.0.0/0 - this allows external HTTP traffic to enter the network
-          - 110: SSH (22) with source your_IP_address/32 - allows SSH connections to the VPC
-          - 120: Custom TCP with Port range 1024-65535 and source 0.0.0.0/0 - allows inbound return traffic from hosts on the internet that are responding to requests originating in the subnet
-          - NOTE: All rules should be Allow rules
+        - 100: HTTP (80) with source `0.0.0.0/0` - this allows external HTTP traffic to enter the network
+        - 110: SSH (22) with source `your_IP_address/32` - allows SSH connections to the VPC
+        - 120: Custom TCP with Port range `1024-65535` and source `0.0.0.0/0` - allows inbound return traffic from hosts on the internet that are responding to requests originating in the subnet
+        - NOTE: All rules should be Allow rules
 
-3. Now, lets set the outbound rules.
+3. Now, lets set the outbound rules:
     - Select the Outbound rules tab
     - Click Edit outbound rules
     - There should be the following rules:
         - 100: HTTP (80) with source 0.0.0.0/0
         - 110: Custom TCP with source private subnet CIDR block (59.84.2.0/32 in this case) and port 27017 for outbound access to our MongoDB server in the private subnet
         - 120: Custom TCP with port 1024-65535 and source 0.0.0.0/0 - allow short lived ports between 1024-65535
-        - NOTE: All rules should be Allow rules
+        - NOTE: All rules should be `Allow` rules
 
 ## Step 9 
 ### Creating a Private NACL for the VPC
 
-1. With the NACL selected, click on the Inbound rules tab
-2. Click Edit inbound rules
+1. With the NACL selected, click on the `Inbound rules` tab
+2. Click `Edit inbound rules`
 3. Remove the default rule and add the following rules:
-    - 100: Custom TCP with source public subnet CIDR block (59.84.1.0/32 in this case) - this allows the app subnet to access the database subnet
+    - 100: Custom TCP with source public subnet CIDR block (`59.84.1.0/32` in this case) - this allows the app subnet to access the database subnet
     - 110: SSH (22) with source your_IP_address/32 - allows SSH connections to the VPC
-    - NOTE: All rules should be Allow rules
+    - NOTE: All rules should be `Allow` rules
   
 4. Now, lets set the outbound rules.
-    - Select the Outbound rules tab
-    - Click Edit outbound rules
+    - Select the `Outbound rules` tab
+    - Click `Edit outbound rules`
     - There should be the following rules:
-        - 100: All traffic with source 0.0.0.0/0 - allow all the traffic out
-        - NOTE: All rules should be Allow rules
+            - 100: All traffic with source `0.0.0.0/0` - allow all the traffic out
+            - NOTE: All rules should be `Allow` rules
 
 ## Step 10
 ### Assigning Subnets to NACLs
-1. Select the Subnet associations tab
-2. Select the Edit subnet associations tab
+1. Select the `Subnet associations` tab
+2. Select the `Edit subnet associations` tab
 3. Select the public/private subnet, depending on the NACL
 
 
