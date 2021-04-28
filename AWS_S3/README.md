@@ -10,11 +10,11 @@ Amazon S3 or Amazon Simple Storage Service is a service offered by Amazon Web Se
 
 **We need running EC2 to ssh into the instance and AWS access and secret**
 ## commands
-`aws s3 mb s3://eng84arunss3` = Makes a bucket
-`aws s3 sync s3://eng84arunss3 README.md` = to download a file bucket 
-`aws s3 cp README.md s3://eng84arunss3` = to copy file from local instance to s3
-`aws s3 rm s3://eng84arunss3/README.md` = to remove a file 
-`aws s3 rb s3://eng84arunss3` = to remove a bucket
+- `aws s3 mb s3://eng84arunss3` = Makes a bucket
+- `aws s3 sync s3://eng84arunss3 README.md` = to download a file bucket 
+- `aws s3 cp README.md s3://eng84arunss3` = to copy file from local instance to s3
+- `aws s3 rm s3://eng84arunss3/README.md` = to remove a file 
+- `aws s3 rb s3://eng84arunss3` = to remove a bucket
 
 
 
