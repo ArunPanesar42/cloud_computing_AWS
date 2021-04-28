@@ -186,4 +186,7 @@
 2. Select the `Edit subnet associations` tab
 3. Select the public/private subnet, depending on the NACL
 
+## AWS VPC Flow Diagram
+**Diagram:**
+![VPC_Pic](https://github.com/ArunPanesar42/cloud_computing_AWS/blob/main/Images/AWS_Diagram.png?raw=true)
 
